@@ -1,0 +1,65 @@
+/* =========================================================
+   Dark green + white theme
+   Load this AFTER the <style> block in index.html so it wins.
+   ========================================================= */
+
+:root {
+  --green: #1f4d3a;        /* main dark green: buttons, headings, bars */
+  --green-dark: #163a2c;   /* hover states, footer */
+  --green-tint: #eef4f0;   /* very light green for backgrounds */
+  --white: #ffffff;
+  --ink: #1c2621;          /* body text */
+  --muted: #55635b;        /* secondary text */
+  --line: #d5e0d9;         /* borders */
+
+  /* Map the template's original variables onto the new palette */
+  --brand: var(--green);
+  --accent: var(--green);
+  --panel: var(--white);
+}
+
+body { background: var(--white); color: var(--ink); }
+
+/* ---------- Header ---------- */
+header { background: var(--white); border-bottom: 3px solid var(--green); }
+.logo { color: var(--green); }
+nav a { color: var(--ink); }
+nav a:hover,
+nav a:focus-visible { color: var(--green); text-decoration: underline; text-underline-offset: 6px; }
+.menu-toggle { border-color: var(--green); color: var(--green); }
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(rgba(238, 244, 240, 0.85), rgba(238, 244, 240, 0.85)),
+              url("images/hero-bg.jpg") center / cover, var(--green-tint);
+}
+.hero h1 { color: var(--green); }
+.features { background: var(--white); border-left: 5px solid var(--green); }
+.feature h2 { color: var(--green); }
+.feature svg { fill: var(--green); }
+
+/* ---------- Buttons ---------- */
+.btn { background: var(--green); color: var(--white); }
+.btn:hover,
+.btn:focus-visible { background: var(--green-dark); }
+
+/* ---------- Bottom bar (dark green with white text) ---------- */
+.bottom-bar { background: var(--green); border-top: none; }
+.bottom-bar .btn { background: var(--white); color: var(--green); }
+.bottom-bar .btn:hover,
+.bottom-bar .btn:focus-visible { background: var(--green-tint); }
+.bottom-bar .phone { color: var(--white); }
+
+/* ---------- Content sections ---------- */
+section.content h2 { color: var(--green); }
+section.content:nth-of-type(odd) { background: var(--green-tint); }
+section.content a { color: var(--green); text-decoration: underline; }
+th { background: var(--green); color: var(--white); }
+td { border-bottom-color: var(--line); }
+
+/* ---------- Footer ---------- */
+footer { background: var(--green-dark); color: var(--white); }
+
+/* ---------- Keyboard focus ---------- */
+:focus-visible { outline-color: var(--green); }
+.bottom-bar :focus-visible { outline-color: var(--white); }
