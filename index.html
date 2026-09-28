@@ -203,6 +203,14 @@
       const open = nav.classList.toggle('open');
       btn.setAttribute('aria-expanded', open);
     });
+    // Gallery arrows
+document.querySelectorAll('.gallery').forEach(gallery => {
+  const track = gallery.querySelector('.gallery-track');
+  gallery.querySelector('.prev').addEventListener('click', () =>
+    track.scrollBy({ left: -track.clientWidth }));
+  gallery.querySelector('.next').addEventListener('click', () =>
+    track.scrollBy({ left: track.clientWidth }));
+});
   </script>
 </body>
 </html>
