@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medical Assistant Training | The Dennelisse Nursing School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1f2a33;
+      --muted: #5b6770;
+      --brand: #1d6fa3;      /* buttons, links */
+      --accent: #2e8b57;     /* feature icons */
+      --panel: rgba(255, 255, 255, 0.9);
+      --line: #dfe5ea;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body { font-family: "Libre Franklin", Arial, sans-serif; color: var(--ink); line-height: 1.5; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+    /* ---------- Header ---------- */
+    header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 84px; gap: 20px; }
+    .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 1.4rem; line-height: 1.1; }
+    .logo img { height: 56px; width: auto; }
+    nav ul { display: flex; gap: 28px; list-style: none; padding: 0; }
+    nav a { font-weight: 600; font-size: 0.9rem; letter-spacing: 0.04em; }
+    nav a:hover, nav a:focus-visible { color: var(--brand); }
+    .menu-toggle { display: none; background: none; border: 1px solid var(--line); padding: 8px 12px; border-radius: 4px; font: inherit; cursor: pointer; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      /* Replace with your own photo: images/hero-bg.jpg */
+      background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+                  url("images/hero-bg.jpg") center / cover, #e9eef2;
+      padding: 64px 0;
+    }
+    .hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: end; }
+    .hero h1 { font-size: clamp(1.9rem, 3.5vw, 2.8rem); line-height: 1.1; font-weight: 800; }
+    .hero .subtitle { font-size: clamp(1.2rem, 2vw, 1.7rem); color: var(--muted); margin: 12px 0 32px; }
+    .features { background: var(--panel); border-radius: 6px; padding: 28px; display: grid; gap: 22px; }
+    .feature { display: flex; gap: 16px; align-items: flex-start; }
+    .feature svg { flex: none; width: 36px; height: 36px; fill: var(--accent); }
+    .feature h2 { font-size: 1.15rem; }
+    .feature p { color: var(--muted); }
+    .hero-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #cfd8df; border-radius: 6px; }
+
+    /* ---------- Bottom bar ---------- */
+    .bottom-bar { background: #f5f7f9; border-top: 1px solid var(--line); position: sticky; bottom: 0; }
+    .bottom-bar .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-top: 10px; padding-bottom: 10px; }
+    .btn { display: inline-block; background: var(--brand); color: #fff; padding: 10px 18px; border-radius: 4px; font-weight: 600; font-size: 0.95rem; }
+    .btn:hover, .btn:focus-visible { background: #155882; }
+    .bar-links { display: flex; gap: 8px; flex-wrap: wrap; }
+    .phone { font-weight: 600; }
+
+    /* ---------- Content sections ---------- */
+    section.content { padding: 56px 0; }
+    section.content h2 { font-size: 1.8rem; margin-bottom: 12px; }
+    section.content p { max-width: 70ch; color: var(--muted); }
+    table { border-collapse: collapse; margin-top: 16px; width: 100%; max-width: 600px; }
+    th, td { text-align: left; padding: 10px; border-bottom: 1px solid var(--line); }
+
+    footer { background: var(--ink); color: #cfd8df; padding: 28px 0; font-size: 0.9rem; }
+
+    :focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+
+    /* ---------- Mobile ---------- */
+    @media (max-width: 800px) {
+      .menu-toggle { display: block; }
+      nav { display: none; width: 100%; }
+      nav.open { display: block; }
+      header .wrap { flex-wrap: wrap; }
+      nav ul { flex-direction: column; gap: 14px; padding-bottom: 16px; }
+      .hero .wrap { grid-template-columns: 1fr; }
+      .hero-photo { max-height: 360px; }
+    }
+  </style>
+  <link rel="stylesheet" href="theme-green.css">
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html">
+        <!-- <img src="images/logo.png" alt=""> -->
+        The Dennelisse Nursing School
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#description">Courses</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Medical Assistant Training Course in New York City</h1>
+          <p class="subtitle">Prepare for your national certification exam</p>
+
+          <div class="features">
+            <div class="feature">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a1 1 0 0 1 1 1v1.1c2.3.4 4 2 4 4.1h-2c0-1.2-1.3-2.2-3-2.2s-3 .9-3 2c0 1.3 1.1 1.7 3.3 2.3 2.4.6 4.7 1.4 4.7 4.3 0 2.1-1.7 3.7-4 4.1V22h-2v-1.3c-2.4-.4-4.2-2.1-4.2-4.4h2c0 1.3 1.4 2.4 3.2 2.4 1.9 0 3-.9 3-2.1 0-1.4-1.1-1.8-3.4-2.4C8.3 13.6 6.1 12.8 6.1 10c0-2 1.6-3.6 3.9-4V2a1 1 0 0 1 1-1z"/></svg>
+              <div><h2>Affordable tuition</h2><p>Weekly payment plans available.</p></div>
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm-7 10.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg>
+              <div><h2>Job placement Assistance</h2><p>Support finding work after you graduate.</p></div>
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.5 2.1-1 1.7L11 13V6h2v6.4z"/></svg>
+              <div><h2>Training in Spanish or English</h2><p>Full-length training with registered nurses in Englush or Spanish.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Replace with your own photo -->
+        <img class="hero-photo" src="images/The-Dennelisse-LHCSA.jpg"The Dennelisse tree logo">
+      </div>
+    </section>
+
+    <section class="content" id="description">
+      <div class="wrap">
+        <h2>Course description</h2>
+        <p>Describe what students learn, how long the course runs, and what certification it prepares them for.</p>
+      </div>
+    </section>
+
+    <section class="content" id="dates">
+      <div class="wrap">
+        <h2>Course dates</h2>
+        <table>
+          <thead><tr><th>Start date</th><th>Schedule</th></tr></thead>
+          <tbody>
+            <tr><td>January 12</td><td>Mon–Fri, 9am–3pm</td></tr>
+            <tr><td>March 2</td><td>Evenings, 6pm–10pm</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content" id="contact">
+      <div class="wrap">
+        <h2>Contact us</h2>
+        <p>Call <a href="tel:+17189935580">(718) 993-5580</a> or visit us at 460 Willis Ave,Bronx, NY 10455</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="bottom-bar">
+    <div class="wrap">
+      <div class="bar-links">
+        <a class="btn" href="#top" aria-label="Back to top">▲</a>
+        <a class="btn" href="#description">Description</a>
+        <a class="btn" href="#dates">Course dates</a>
+      </div>
+        <a class="phone" href="tel:+17189935580">(718) 993-5580</a>x`   
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">© The Dennelisse Nursing School</div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('site-nav');
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>
