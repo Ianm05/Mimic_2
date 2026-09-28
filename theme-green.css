@@ -63,3 +63,43 @@ footer { background: var(--green-dark); color: var(--white); }
 /* ---------- Keyboard focus ---------- */
 :focus-visible { outline-color: var(--green); }
 .bottom-bar :focus-visible { outline-color: var(--white); }
+/* Smooth scrolling when nav links jump to a section */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Stop the sticky header from covering the section heading */
+section[id] { scroll-margin-top: 90px; }
+
+/* ---------- Contact form ---------- */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 32px;
+  margin-top: 24px;
+  max-width: 900px;
+  background: var(--white);
+  padding: 28px;
+  border-radius: 6px;
+  border-top: 5px solid var(--green);
+}
+.contact-form .full { grid-column: 1 / -1; }
+.contact-form label { display: block; font-weight: 600; margin-bottom: 6px; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--ink);
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus { border-color: var(--green); outline: 2px solid var(--green); outline-offset: 0; }
+.contact-form .submit { padding: 14px; font-size: 1rem; border: none; cursor: pointer; }
+
+@media (max-width: 800px) {
+  .contact-form { grid-template-columns: 1fr; padding: 20px; }
+}
