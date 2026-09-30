@@ -168,3 +168,8 @@ section[id] { scroll-margin-top: 90px; }
 .gallery-btn:hover, .gallery-btn:focus-visible { background: var(--green-dark); }
 .gallery-btn.prev { left: 12px; }
 .gallery-btn.next { right: 12px; }
+
+/* Keep button text white inside content sections */
+section.content a.btn { color: var(--white); text-decoration: none; }
+section.content a.btn:hover,
+section.content a.btn:focus-visible { background: var(--green-dark); }
