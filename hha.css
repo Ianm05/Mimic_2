@@ -1,0 +1,175 @@
+/* =========================================================
+   HHA training page styles
+   Link AFTER base.css and theme-green.css (only on hha.html).
+   ========================================================= */
+
+/* ---------- Intro ---------- */
+.hha-intro { background: var(--green-tint); padding: 56px 0 40px; }
+.hha-intro h1 {
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  line-height: 1.15;
+  font-weight: 800;
+  color: var(--green);
+  max-width: 22ch;
+}
+.hha-intro .lead { font-size: 1.15rem; color: var(--muted); max-width: 60ch; margin: 12px 0 28px; }
+
+.quick-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+.quick-facts li {
+  background: var(--white);
+  border-radius: 6px;
+  padding: 18px 20px;
+  border-left: 5px solid var(--green);
+}
+.quick-facts strong { display: block; font-size: 1.15rem; color: var(--green); }
+.quick-facts span { color: var(--muted); font-size: 0.95rem; }
+
+/* ---------- Section headings ---------- */
+.section-lead { color: var(--muted); margin-bottom: 24px; }
+
+/* ---------- Pathway cards ---------- */
+.pathways {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.pathway {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--green);
+  border-radius: 6px;
+  padding: 24px;
+}
+.pathway .tag {
+  align-self: flex-start;
+  background: var(--green-tint);
+  color: var(--green);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+.pathway h3 { font-size: 1.2rem; color: var(--ink); margin-bottom: 8px; }
+.pathway p { color: var(--muted); margin-bottom: 16px; }
+.pathway ul { list-style: none; padding: 0; margin-bottom: 24px; display: grid; gap: 8px; }
+.pathway li { position: relative; padding-left: 28px; }
+.pathway li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--green-tint);
+  color: var(--green);
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+}
+.pathway .btn { margin-top: auto; text-align: center; }
+
+/* ---------- Steps ---------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  counter-reset: step;
+}
+.steps li { counter-increment: step; }
+.steps li::before {
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--white); 
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+.steps h3 { font-size: 1.05rem; margin-bottom: 4px; }
+.steps p { color: var(--muted); font-size: 0.95rem; }
+
+/* ---------- Application + office info ---------- */
+.apply-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.apply-card,
+.office-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--green);
+  border-radius: 6px;
+  padding: 28px;
+}
+.apply-card h3,
+.office-card h3 { font-size: 1.25rem; color: var(--green); margin-bottom: 6px; }
+.apply-card > p,
+.office-card > p { color: var(--muted); margin-bottom: 20px; }
+
+.hha-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 20px; }
+.hha-form .full { grid-column: 1 / -1; }
+.hha-form label { display: block; font-weight: 600; margin-bottom: 6px; }
+.hha-form .req { color: #a3261f; }
+.hha-form input,
+.hha-form select,
+.hha-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--ink);
+}
+.hha-form input:focus,
+.hha-form select:focus,
+.hha-form textarea:focus { border-color: var(--green); outline: 2px solid var(--green); outline-offset: 0; }
+.hha-form button { padding: 14px; font-size: 1rem; border: none; cursor: pointer; }
+
+.office-card dl { display: grid; gap: 14px; }
+.office-card dt { font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+.office-card dd { margin: 2px 0 0; }
+.office-card a { color: var(--green); text-decoration: underline; }
+.office-card .license {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Keep button text white inside content sections */
+section.content a.btn { color: var(--white); text-decoration: none; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 900px) {
+  .pathways,
+  .apply-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .quick-facts,
+  .steps,
+  .hha-form { grid-template-columns: 1fr; }
+}

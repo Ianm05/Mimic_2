@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Health Aide Training | The Dennelisse LHCSA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Order matters: base, then theme, then this page's styles -->
+  <link rel="stylesheet" href="base.css?v=3">
+  <link rel="stylesheet" href="theme-green.css?v=8">
+  <link rel="stylesheet" href="hha.css?v=1">
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html">The Dennelisse LHCSA</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hha.html" aria-current="page">HHA training</a></li>
+          <li><a href="index.html#description">Courses</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="index.html#contact">Contact us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== Intro ========== -->
+    <section class="hha-intro">
+      <div class="wrap">
+        <h1>Become a Home Health Aide and start working in your borough</h1>
+        <p class="lead">Get trained, certified, and placed with patients near your home. We train new candidates, upgrade Personal Care Aides, and hire certified HHAs across New York City.</p>
+        <!-- CONFIRM these three facts before publishing -->
+        <ul class="quick-facts">
+          <li><strong>75+ training hours</strong><span>NYS DOH-approved classroom and supervised skills lab</span></li>
+          <li><strong>Free training option</strong><span>Sponsored training for qualifying candidates who commit to working with us</span></li>
+          <li><strong>All 5 boroughs</strong><span>Bronx, Manhattan, Brooklyn, Queens, and Staten Island</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== Pathways ========== -->
+    <section class="content" id="pathways">
+      <div class="wrap">
+        <h2>Choose your path</h2>
+        <p class="section-lead">Pick the option that matches where you are today.</p>
+
+        <div class="pathways">
+          <article class="pathway">
+            <span class="tag">New to healthcare</span>
+            <h3>Full HHA certification</h3>
+            <p>For people new to healthcare who want to earn their Home Health Aide certificate and start working with Dennelisse LHCSA.</p>
+            <ul>
+              <li>At least 18 years old</li>
+              <li>Basic reading and writing skills</li>
+              <li>Criminal background check</li>
+              <li>Medical exam and TB clearance</li>
+            </ul>
+            <a class="btn" href="#apply" data-status="Uncertified - seeking HHA training">Apply for training</a>
+          </article>
+
+          <article class="pathway">
+            <span class="tag">Have a PCA certificate</span>
+            <h3>PCA to HHA upgrade</h3>
+            <p>Shorter training for active Personal Care Aides who want to expand their skills and earning potential.</p>
+            <ul>
+              <li>Valid NYS PCA certificate</li>
+              <li>Fewer training hours than the full program</li>
+              <li>Vital signs and nursing task training</li>
+              <li>Placement when you finish</li>
+            </ul>
+            <a class="btn" href="#apply" data-status="Active PCA - seeking HHA upgrade">Apply for the upgrade</a>
+          </article>
+
+          <article class="pathway">
+            <span class="tag">Already an HHA</span>
+            <h3>Job placement for certified HHAs</h3>
+            <p>Start working across the five boroughs if you're a certified HHA with active New York State registry status.</p>
+            <ul>
+              <li>Valid NYS HHA certificate</li>
+              <li>Full-time and part-time cases</li>
+              <li>Competitive pay and benefits</li>
+              <li>Paid ongoing in-service training</li>
+            </ul>
+            <a class="btn" href="#apply" data-status="Certified HHA - seeking employment">Apply for a job</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Steps ========== -->
+    <section class="content" id="steps">
+      <div class="wrap">
+        <h2>How it works</h2>
+        <p class="section-lead">Four steps from application to your first patient.</p>
+        <ol class="steps">
+          <li>
+            <h3>Apply</h3>
+            <p>Fill out the short form below to tell us about yourself.</p>
+          </li>
+          <li>
+            <h3>Interview and screening</h3>
+            <p>A brief interview, background check, and medical clearance.</p>
+          </li>
+          <li>
+            <h3>Training and exam</h3>
+            <p>State-approved classes and a hands-on skills test.</p>
+          </li>
+          <li>
+            <h3>Start working</h3>
+            <p>Get your NYS certificate and your first patients in the borough you choose.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== Application + office ========== -->
+    <section class="content" id="apply">
+      <div class="wrap">
+        <h2>Apply now</h2>
+        <p class="section-lead">Our recruitment coordinator will contact you to guide you through training or hiring.</p>
+
+        <div class="apply-grid">
+          <div class="apply-card">
+            <h3>HHA training and employment form</h3>
+            <p>Fields marked <span class="req">*</span> are required.</p>
+
+            <!-- Replace YOUR_FORM_ID with your Formspree form ID -->
+            <form class="hha-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <input type="hidden" name="_subject" value="New HHA application">
+
+              <div class="full">
+                <label for="hha-name">Full name <span class="req">*</span></label>
+                <input id="hha-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div>
+                <label for="hha-email">Email <span class="req">*</span></label>
+                <input id="hha-email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div>
+                <label for="hha-phone">Phone <span class="req">*</span></label>
+                <input id="hha-phone" name="phone" type="tel" autocomplete="tel" placeholder="(212) 555-0100" required>
+              </div>
+              <div>
+                <label for="hha-borough">Preferred borough</label>
+                <select id="hha-borough" name="borough">
+                  <option value="">Choose one</option>
+                  <option>Bronx</option>
+                  <option>Manhattan</option>
+                  <option>Brooklyn</option>
+                  <option>Queens</option>
+                  <option>Staten Island</option>
+                </select>
+              </div>
+              <div>
+                <label for="hha-status">Your situation <span class="req">*</span></label>
+                <select id="hha-status" name="status" required>
+                  <option value="">Choose one</option>
+                  <option>Uncertified - seeking HHA training</option>
+                  <option>Active PCA - seeking HHA upgrade</option>
+                  <option>Certified HHA - seeking employment</option>
+                </select>
+              </div>
+              <div class="full">
+                <label for="hha-message">Questions or other details</label>
+                <textarea id="hha-message" name="message" rows="4"></textarea>
+              </div>
+
+              <!-- Hidden spam trap -->
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+              <button class="btn full" type="submit">Submit application</button>
+            </form>
+          </div>
+
+          <!-- CONFIRM every detail in this card before publishing -->
+          <aside class="office-card">
+            <h3>Recruitment office</h3>
+            <p>Visit or contact our Bronx office about HHA training and jobs.</p>
+            <dl>
+              <div>
+                <dt>Phone</dt>
+                <dd><a href="tel:+12122658320">(212) 265-8320</a></dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd><a href="mailto:edu@dlhcsa.org">edu@dlhcsa.org</a></dd>
+              </div>
+              <div>
+                <dt>Address</dt>
+                <dd>460 Willis Ave, 2nd Floor<br>Bronx, NY 10455</dd>
+              </div>
+              <div>
+                <dt>Hours</dt>
+                <dd>Monday to Friday, 9am to 5pm</dd>
+              </div>
+            </dl>
+            <p class="license">Licensed Home Care Services Agency (LHCSA)</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="bottom-bar">
+    <div class="wrap">
+      <div class="bar-links">
+        <a class="btn" href="#top" aria-label="Back to top">▲</a>
+        <a class="btn" href="#pathways">Paths</a>
+        <a class="btn" href="#apply">Apply</a>
+      </div>
+      <a class="phone" href="tel:+12122658320">(212) 265-8320</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">© The Dennelisse LHCSA</div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('site-nav');
+    menuBtn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open);
+    });
+
+    // Pathway buttons: jump to the form and pre-select the matching situation
+    const statusSelect = document.getElementById('hha-status');
+    document.querySelectorAll('.pathway .btn[data-status]').forEach(link => {
+      link.addEventListener('click', () => {
+        statusSelect.value = link.dataset.status;
+        setTimeout(() => document.getElementById('hha-name').focus({ preventScroll: true }), 400);
+      });
+    });
+  </script>
+</body>
+</html>
