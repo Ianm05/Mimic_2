@@ -173,3 +173,13 @@ section[id] { scroll-margin-top: 90px; }
 section.content a.btn { color: var(--white); text-decoration: none; }
 section.content a.btn:hover,
 section.content a.btn:focus-visible { background: var(--green-dark); }
+
+/* Hero image: show the whole image instead of cropping it */
+.hero-photo {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: contain;
+  align-self: center;
+  background: var(--white);
+  padding: 24px;
+}
