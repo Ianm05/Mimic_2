@@ -31,6 +31,13 @@
 
   <main>
     <section class="hero hero-full">
+          <section class="hero hero-full">
+      <video class="hero-video" autoplay muted loop playsinline poster="images/hero-bg.jpg" aria-hidden="true">
+        <source src="images/hero.mp4" type="video/mp4">
+      </video>
+      <button class="hero-pause" type="button" aria-label="Pause background video">❚❚</button>
+      <div class="wrap">
+        <div class="hero-card">
       <div class="wrap">
         <div class="hero-card">
           <h1>Medical Assistant Training Course in New York City</h1>
@@ -148,6 +155,21 @@
       const open = nav.classList.toggle('open');
       menuBtn.setAttribute('aria-expanded', open);
     });
-  </script>
+ 
+const video = document.querySelector('.hero-video');
+const pauseBtn = document.querySelector('.hero-pause');
+if (video && pauseBtn) {
+  // Respect visitors who've asked their device to reduce motion
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) video.pause();
+  const sync = () => {
+    pauseBtn.textContent = video.paused ? '▶' : '❚❚';
+    pauseBtn.setAttribute('aria-label', video.paused ? 'Play background video' : 'Pause background video');
+  };
+  pauseBtn.addEventListener('click', () => { video.paused ? video.play() : video.pause(); });
+  video.addEventListener('play', sync);
+  video.addEventListener('pause', sync);
+  sync();
+}
+ </script>
 </body>
 </html>
