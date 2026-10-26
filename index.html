@@ -88,7 +88,7 @@
         <h2>Contact us</h2>
         <p>Fill out the form and we'll reach you by phone or email within 24 hours.</p>
 
-        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form class="contact-form" data-table="contact_submissions" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="field">
             <label for="first-name">First name</label>
             <input id="first-name" name="first_name" type="text" autocomplete="given-name" required>
@@ -168,5 +168,6 @@ if (video && pauseBtn) {
   sync();
 }
  </script>
+  <script src="forms.js?v=1"></script>
 </body>
 </html>
