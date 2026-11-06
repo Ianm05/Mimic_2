@@ -12,6 +12,7 @@
   --ink: #22302a;
   --muted: #56635a;
   --line: #dbe7cf;
+  --sunlit-leaf: #eef3cf;  /* light through a leaf */
 
   --brand: var(--green);
   --accent: var(--green);
@@ -281,3 +282,21 @@ section.content a.btn:focus-visible { background: var(--green-dark); }
 
 /* Lighter top line on the header instead of a heavy bar */
 header { border-bottom: 3px solid var(--leaf-light); }
+/* ---------- Sunlit leaf: the light sections ---------- */
+section.content:nth-of-type(even) {
+  background:
+    radial-gradient(ellipse 70% 60% at 90% 0%, rgba(248, 239, 190, 0.9), transparent 70%),
+    radial-gradient(ellipse 50% 45% at 0% 100%, rgba(159, 209, 124, 0.25), transparent 70%),
+    var(--sunlit-leaf);
+}
+
+/* Cards stay bright white so they stand out on the leaf color */
+section.content:nth-of-type(even) .contact-form,
+section.content:nth-of-type(even) .offer-grid > div,
+section.content:nth-of-type(even) .pathway,
+section.content:nth-of-type(even) .apply-card,
+section.content:nth-of-type(even) .office-card,
+section.content:nth-of-type(even) .doc {
+  background: #fffef8;
+  box-shadow: 0 8px 24px rgba(90, 100, 30, 0.10);
+}
