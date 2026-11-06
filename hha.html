@@ -132,12 +132,12 @@
             <p>Fields marked <span class="req">*</span> are required.</p>
 
             <!-- Replace YOUR_FORM_ID with your Formspree form ID -->
-            <form class="hha-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <form class="hha-form" data-table="hha_applications" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
               <input type="hidden" name="_subject" value="New HHA application">
 
               <div class="full">
                 <label for="hha-name">Full name <span class="req">*</span></label>
-                <input id="hha-name" name="name" type="text" autocomplete="name" required>
+                <input id="hha-name" name="full_name" type="text" autocomplete="name" required>
               </div>
               <div>
                 <label for="hha-email">Email <span class="req">*</span></label>
@@ -241,5 +241,6 @@
       });
     });
   </script>
+  <script src="forms.js?v=1"></script>
 </body>
 </html>

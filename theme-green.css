@@ -4,15 +4,15 @@
    ========================================================= */
 
 :root {
-  --green: #1f4d3a;        /* main dark green: buttons, headings, bars */
-  --green-dark: #163a2c;   /* hover states, footer */
-  --green-tint: #eef4f0;   /* very light green for backgrounds */
-  --white: #ffffff;
-  --ink: #1c2621;          /* body text */
-  --muted: #55635b;        /* secondary text */
-  --line: #d5e0d9;         /* borders */
+  --green: #2f6b4f;
+  --green-dark: #1e4436;
+  --green-tint: #f3f1e8;
+  --white: #fdfbf7;
+  --gold: #e9a23b;
+  --ink: #24302a;
+  --muted: #5c6660;
+  --line: #e4dfd3;
 
-  /* Map the template's original variables onto the new palette */
   --brand: var(--green);
   --accent: var(--green);
   --panel: var(--white);
@@ -232,3 +232,16 @@ section.content a.btn:focus-visible { background: var(--green-dark); }
   cursor: pointer;
 }
 .hero-pause:hover, .hero-pause:focus-visible { background: var(--white); }
+
+/* Warm accent for main calls to action */
+.hero-actions .btn:not(.btn-outline),
+.contact-form .submit,
+.hha-form button,
+.pathway .btn {
+  background: var(--gold);
+  color: var(--green-dark);
+}
+.hero-actions .btn:not(.btn-outline):hover,
+.contact-form .submit:hover,
+.hha-form button:hover,
+.pathway .btn:hover { background: #d8912c; }
