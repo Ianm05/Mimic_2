@@ -4,20 +4,19 @@
    ========================================================= */
 
 :root {
-  --green: #2f6b4f;
-  --green-dark: #1e4436;
-  --green-tint: #f3f1e8;
-  --white: #fdfbf7;
-  --gold: #e9a23b;
-  --ink: #24302a;
-  --muted: #5c6660;
-  --line: #e4dfd3;
+  --green: #2f6e3b;        /* leaf: headings, links */
+  --green-dark: #1d4a2c;   /* forest: footer, bars, text on new leaf */
+  --leaf-light: #9fd17c;   /* new leaf: main buttons, highlights */
+  --green-tint: #eef5e6;   /* sprout: section backgrounds */
+  --white: #fbfcf7;        /* soft white page */
+  --ink: #22302a;
+  --muted: #56635a;
+  --line: #dbe7cf;
 
   --brand: var(--green);
   --accent: var(--green);
-  --panel: var(--white);
+  --panel: #ffffff;
 }
-
 body { background: var(--white); color: var(--ink); }
 
 /* ---------- Header ---------- */
