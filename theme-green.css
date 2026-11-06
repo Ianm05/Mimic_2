@@ -244,3 +244,40 @@ section.content a.btn:focus-visible { background: var(--green-dark); }
 .contact-form .submit:hover,
 .hha-form button:hover,
 .pathway .btn:hover { background: #d8912c; }
+/* ---------- Leaf aesthetic ---------- */
+
+/* Main calls to action: new-leaf green with forest text */
+.hero-actions .btn:not(.btn-outline),
+.contact-form .submit,
+.hha-form button,
+.pathway .btn {
+  background: var(--leaf-light);
+  color: var(--green-dark);
+}
+.hero-actions .btn:not(.btn-outline):hover,
+.contact-form .submit:hover,
+.hha-form button:hover,
+.pathway .btn:hover { background: #8cc26a; }
+
+/* Rounder, softer buttons */
+.btn { border-radius: 999px; padding: 11px 22px; }
+
+/* Cards: soft shadow instead of hard gray borders */
+.features, .hero-card, .offer-grid > div, .pathway,
+.apply-card, .office-card, .contact-form, .doc {
+  border-radius: 14px;
+  border-color: transparent;
+  box-shadow: 0 6px 20px rgba(29, 74, 44, 0.08);
+}
+
+/* Feature icons sit in a pale leaf circle */
+.feature svg {
+  background: var(--green-tint);
+  border-radius: 50%;
+  padding: 8px;
+  width: 44px;
+  height: 44px;
+}
+
+/* Lighter top line on the header instead of a heavy bar */
+header { border-bottom: 3px solid var(--leaf-light); }
