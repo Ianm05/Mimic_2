@@ -317,4 +317,30 @@ section#about .offer-grid > div {
   border-top: 4px solid var(--green);
   box-shadow: 0 6px 18px rgba(120, 90, 10, 0.15);
 }
-section#about .offer-grid h4 { color: var(--green); }
+section #about .offer-grid h4 { color: var(--green); }
+/* ---------- Fonts: warm serif headings, friendly sans body ---------- */
+:root {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Figtree", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* Headings and the logo in Fraunces */
+h1, h2, h3, .logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.hero h1, .hha-intro h1 { font-weight: 700; line-height: 1.1; }
+
+/* Small labels stay in the body font so they're easy to scan */
+h4, .faq summary, nav a, .btn, label {
+  font-family: var(--font-body);
+}
+
+/* Form fields and buttons use the body font too */
+input, select, textarea, button { font-family: var(--font-body); }
