@@ -220,4 +220,18 @@ section#documents .section-lead { color: #4a5650; }
 section#documents .doc {
   background: #fffdf6;
   box-shadow: 0 6px 18px rgba(120, 90, 10, 0.15);
+  /* ---------- Hero card: golden yellow ---------- */
+.hero-card {
+  background: linear-gradient(180deg, #f8ecc2 0%, #f5e2a0 100%);
+}
+
+/* Darker text on gold for easy reading */
+.hero-card h1 { color: var(--green-dark); }
+.hero-card .subtitle { color: #4a5650; }
+
+/* Keep the feature list on ivory so it stands out inside the gold card */
+.hero-card .features {
+  background: #fffdf6;
+  box-shadow: 0 6px 18px rgba(120, 90, 10, 0.15);
+}
 }
