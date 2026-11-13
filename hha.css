@@ -173,3 +173,35 @@ section.content a.btn { color: var(--white); text-decoration: none; }
   .steps,
   .hha-form { grid-template-columns: 1fr; }
 }
+/* ---------- Ivory instead of white ---------- */
+header,
+.hero-card,
+.features,
+.contact-form,
+.offer-grid > div,
+.pathway,
+.apply-card,
+.office-card,
+.doc,
+.faq details,
+section.content:nth-of-type(even) .contact-form,
+section.content:nth-of-type(even) .offer-grid > div,
+section.content:nth-of-type(even) .pathway,
+section.content:nth-of-type(even) .apply-card,
+section.content:nth-of-type(even) .office-card,
+section.content:nth-of-type(even) .doc {
+  background: var(--ivory);
+}
+
+
+.contact-form input, .contact-form select, .contact-form textarea,
+.hha-form input, .hha-form select, .hha-form textarea {
+  background: #fffdf6;
+  border-color: #e6dfc8;
+}
+
+
+.bottom-bar .btn,
+.btn-outline { background: var(--ivory); }
+.bottom-bar .btn:hover,
+.btn-outline:hover { background: var(--ivory-deep); }
