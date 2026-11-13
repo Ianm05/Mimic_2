@@ -302,3 +302,19 @@ section.content:nth-of-type(even) .doc {
 }
 .print-btn { background: var(--green); color: #fff; }
 .print-btn:hover { background: var(--green-dark); }
+/* ---------- About: golden yellow section ---------- */
+section#about {
+  background: linear-gradient(180deg, #f8ecc2 0%, #f5e2a0 100%);
+}
+
+/* Darker text on gold for easy reading */
+section#about h2,
+section#about h3 { color: var(--green-dark); }
+
+/* Ivory cards so they stand out against the gold */
+section#about .offer-grid > div {
+  background: #fffdf6;
+  border-top: 4px solid var(--green);
+  box-shadow: 0 6px 18px rgba(120, 90, 10, 0.15);
+}
+section#about .offer-grid h4 { color: var(--green); }
