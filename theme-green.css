@@ -300,3 +300,5 @@ section.content:nth-of-type(even) .doc {
   background: #fffef8;
   box-shadow: 0 8px 24px rgba(90, 100, 30, 0.10);
 }
+.print-btn { background: var(--green); color: #fff; }
+.print-btn:hover { background: var(--green-dark); }
