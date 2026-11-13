@@ -199,15 +199,25 @@ section.content:nth-of-type(even) .doc {
   background: #fffdf6;
   border-color: #e6dfc8;
 }
+/* Print button: match the site's green */
+.btn.print-btn {
+  background: var(--green);
+  color: #fff;
+  box-shadow: none;
+}
+.btn.print-btn:hover,
+.btn.print-btn:focus-visible { background: var(--green-dark); }
+/* ---------- What to bring: golden yellow section ---------- */
+section#documents {
+  background: linear-gradient(180deg, #f8ecc2 0%, #f5e2a0 100%);
+}
 
+/* Darker text on gold for easy reading */
+section#documents h2 { color: var(--green-dark); }
+section#documents .section-lead { color: #4a5650; }
 
-.bottom-bar .btn,
-.btn-outline { background: var(--ivory); }
-.bottom-bar .btn:hover,
-.btn-outline:hover { background: var(--ivory-deep); }
-/* Admissions checklist: clearer cards */
-.doc {
+/* Bright ivory cards so they pop against the gold */
+section#documents .doc {
   background: #fffdf6;
-  border-left: 5px solid var(--green);
-  box-shadow: 0 6px 18px rgba(29, 74, 44, 0.12);
+  box-shadow: 0 6px 18px rgba(120, 90, 10, 0.15);
 }
