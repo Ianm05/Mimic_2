@@ -344,3 +344,48 @@ h4, .faq summary, nav a, .btn, label {
 
 /* Form fields and buttons use the body font too */
 input, select, textarea, button { font-family: var(--font-body); }
+/* ---------- Leaf branches in the background of each section ---------- */
+/* Paste at the bottom of theme-green.css. Needs images/leaf-branch.svg. */
+
+section.content {
+  position: relative;
+  overflow: hidden;            /* keeps the leaves inside their section */
+}
+
+/* The branch itself: decorative only, behind the content, not clickable */
+section.content::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  width: 260px;
+  height: 260px;
+  background: url("images/leaf-branch.svg") no-repeat center / contain;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Alternate: every other section's branch hangs from the bottom-right instead.
+   Both stay on the right, away from the left-aligned headings and text. */
+section.content:nth-of-type(odd)::before {
+  top: auto;
+  bottom: -20px;
+  transform: scaleY(-1);
+}
+
+/* Keep all real content above the leaves */
+section.content > .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+/* Smaller, fainter leaves on phones so they never crowd the text */
+@media (max-width: 800px) {
+  section.content::before { width: 160px; height: 160px; opacity: 0.1; }
+}
+
+/* No leaves when printing (e.g. the admissions checklist) */
+@media print {
+  section.content::before { display: none; }
+}
