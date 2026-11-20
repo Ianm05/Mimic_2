@@ -390,7 +390,7 @@ section.content > .wrap {
   section.content::before { display: none; }
 }
 header {
-  background: #fbf7ea
-  backdrop-filter none;
-  opacity: 1;
+background: #fbf7ea;
+backdrop-filter: none;
+opacity: 1;
 }
