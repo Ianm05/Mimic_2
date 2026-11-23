@@ -396,3 +396,12 @@ background: #fbf7ea;
 backdrop-filter: none;
 opacity: 1;
 }
+/* ---------- Bottom bar buttons: solid ivory ---------- */
+.bottom-bar .bar-links .btn {
+  background: #fbf7ea;
+  color: var(--green-dark);
+}
+.bottom-bar .bar-links .btn:hover,
+.bottom-bar .bar-links .btn:focus-visible {
+  background: #f7f1de;
+}
