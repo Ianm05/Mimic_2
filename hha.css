@@ -173,33 +173,7 @@ section.content a.btn { color: var(--white); text-decoration: none; }
   .steps,
   .hha-form { grid-template-columns: 1fr; }
 }
-/* ---------- Ivory instead of white ---------- */
-header,
-.hero-card,
-.features,
-.contact-form,
-.offer-grid > div,
-.pathway,
-.apply-card,
-.office-card,
-.doc,
-.faq details,
-section.content:nth-of-type(even) .contact-form,
-section.content:nth-of-type(even) .offer-grid > div,
-section.content:nth-of-type(even) .pathway,
-section.content:nth-of-type(even) .apply-card,
-section.content:nth-of-type(even) .office-card,
-section.content:nth-of-type(even) .doc {
-  background: var(--ivory);
-}
-
-
-.contact-form input, .contact-form select, .contact-form textarea,
-.hha-form input, .hha-form select, .hha-form textarea {
-  background: #fffdf6;
-  border-color: #e6dfc8;
-}
-/* Print button: match the site's green */
+/* ---------- Print button: match the site's green ---------- */
 .btn.print-btn {
   background: var(--green);
   color: #fff;
@@ -207,31 +181,14 @@ section.content:nth-of-type(even) .doc {
 }
 .btn.print-btn:hover,
 .btn.print-btn:focus-visible { background: var(--green-dark); }
+
 /* ---------- What to bring: golden yellow section ---------- */
 section#documents {
   background: linear-gradient(180deg, #f8ecc2 0%, #f5e2a0 100%);
 }
-
-/* Darker text on gold for easy reading */
 section#documents h2 { color: var(--green-dark); }
 section#documents .section-lead { color: #4a5650; }
-
-/* Bright ivory cards so they pop against the gold */
 section#documents .doc {
   background: #fffdf6;
   box-shadow: 0 6px 18px rgba(120, 90, 10, 0.15);
-  /* ---------- Hero card: golden yellow ---------- */
-.hero-card {
-  background: linear-gradient(180deg, #f8ecc2 0%, #f5e2a0 100%);
-}
-
-/* Darker text on gold for easy reading */
-.hero-card h1 { color: var(--green-dark); }
-.hero-card .subtitle { color: #4a5650; }
-
-/* Keep the feature list on ivory so it stands out inside the gold card */
-.hero-card .features {
-  background: #fffdf6;
-  box-shadow: 0 6px 18px rgba(120, 90, 10, 0.15);
-}
 }

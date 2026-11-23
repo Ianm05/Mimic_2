@@ -13,6 +13,8 @@
   --muted: #56635a;
   --line: #dbe7cf;
   --sunlit-leaf: #eef3cf;  /* light through a leaf */
+    --ivory: #fbf7ea;
+  --ivory-deep: #f7f1de;
 
   --brand: var(--green);
   --accent: var(--green);
